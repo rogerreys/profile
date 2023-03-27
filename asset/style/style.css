@@ -1,9 +1,19 @@
+:root{
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-gothic: 'Pathway Gothic One', sans-serif;
+    --font-roboto-condensed: 'Roboto Condensed', sans-serif;
+    --red: #b60e1d;
+    --white: #ffffff;
+    --gray: #2a2a2e;
+    --black: #000000;
+    --shadow: rgb(44, 44, 44);
+}
 /*GENERALES*/
 *{
     margin:0px;
     padding: 0px;
     /*Font: Raleway*/
-    font-family: 'Raleway', sans-serif;
+    font-family: Roboto,'Raleway', sans-serif;
 }
 body{
     /*font-family: noto;*/
@@ -11,6 +21,7 @@ body{
     /* background-image: url('../img/blackBaground.jpg'); */
     /* background-attachment: fixed; */
 }
+
 /*Main*/
 main{
     display: flex;
@@ -20,7 +31,6 @@ main{
 h2{
     font-size: 60px;
     padding-bottom: 10px;
-    /*Noto Serif*/
     font-family: 'Noto Serif', serif;
 }
 /*a*/
@@ -38,9 +48,9 @@ a{
 /*CABECERA*/
 #menu{
     width: 100%;
-    background: rgba(0, 20, 10,0.8);
+    background: transparent;
     position: fixed;
-    text-transform: uppercase;
+    text-transform: capitalize;
     /*Roboto Slab*/
     font-family: 'Ubuntu', sans-serif;
     font-size: 25px;
@@ -103,10 +113,7 @@ section{
     background-image: url("../img/screen.jpg") ;
     background-repeat: no-repeat;
 }
-.Intro h2{
-    text-align: center;
-    font-size: 75px;
-    padding-bottom: -10px; 
+.Intro h3{
     width: 100%;
 }
 .Intro h6{
@@ -116,36 +123,39 @@ section{
     color:white;   
 }
 .Intro a{
-    color: white;
+    font-family: var(--font-gothic);
+    color: var(--red);
+    padding: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 3px;
 }
 .Intro p{
     font-size: 38px;
     color:white;
     font-weight: bolder;
+    width: 100%;
 }
-
-
 
 /*AboutMe*/
 .AboutMe{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    width: 100%;
     justify-content: space-around;
     min-height: 510px;
-    background: rgba(32, 178, 170,0.9);
+    background: var(--gray);
+}
+.AboutMe h3 a{
+    text-align: justify;
+    color: var(--gray);
 }
 .AboutMe p{
     text-align: justify;
-    font-weight: bolder;
+    color: var(--white);
 }
 .infoAboutMe{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
-    width: 45%;
+    padding: 20px;
+    background-color: var(--red);
 }
 .infoAboutMe img{
     margin-top: 20px; 
@@ -153,29 +163,39 @@ section{
     width: 200px;
     border-radius: 50%;
 }
+
 .skill{
     padding: 10px;
-    width: 45%;
+    background-color: var(--gray);
 }
 .skill h2{
     text-align: center;
 }
+.skill h3 a{
+    text-align: center;
+    color: var(--white);
+}
+.skill h3{
+    text-align: center;
+    color: var(--red);
+}
 .skill li{
     list-style: none;   
     padding-left: 20px;
+    color: var(--white);
 }
 
 
 /*Projects*/
 .Project{
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--white);
     min-height: 550px;
     align-items: center;
     justify-content: center;
     margin: 0px auto; 
 }
-.Project h2 a{
-    color: #999;
+.Project h3 a{
+    color: var(--gray);
 }
 .Project a{
     color:rgba(153, 153, 102, 0.3);
@@ -209,7 +229,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background: rgba(153, 153, 102,0.9);
+    background: var(--gray);
 }
 .Contact h2{
     padding-top: 0px;    

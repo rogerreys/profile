@@ -5,137 +5,205 @@
         <meta name="description" content="Webpage developed by roger rys">
         <meta name="author" content="roger reys">
 
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+        
         <link href="asset/style/style.css" rel="stylesheet">
     </head>
-    <style></style>
+    
     <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Reys</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Roger Reys</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#AboutMe">AboutMe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
         <article id="contenido">
             <!-- Contenido: Intro -->
             <div class="Intro">
-                <h2><a href="#Intro">Desarrollador Web Full-Stack</a></h2>
-                <h6>Junior</h6>
-                <p>Cumpliendo objetivos mutuos</p>
+                    <h3 class="text-end"><a href="#Intro">Desarrollador Web FULL-STACK</a></h2>
+                    <p class="text-end">Cumpliendo objetivos mutuos</p>
             </div>
             <!-- Contenido: AboutMe -->
             <div class="AboutMe">
-                <div class="infoAboutMe">
-                    <h2><a href="#AboutMe">Acerca de mi</a></h2>
-                    <p>Hola!!! Me llamo Roger Reyes y soy un desarrollador web fullstack junior, en constante aprendizaje y con el deseo de desarrollar grandes proyectos 
-                        para solucionar problemas.</p>
-                    <br>
-                    <p>Dispuesto a trabajar en grupo para lograr objetivos mutuos.</p>
-                    <br>
-                    <p>Tambien, llevo algunos años programando pero ultimamente me he dedicado al mundo del desarrollo web.</p>
-                    <img src="asset/img/perfil.png">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 infoAboutMe">
+                            <h3 class="text-center"><a href="#AboutMe">Acerca de mi</a></h2>
+                            <p>Hola!!! Me llamo Roger Reyes y soy un desarrollador web fullstack junior, en constante aprendizaje y con el deseo de desarrollar grandes proyectos 
+                                para solucionar problemas.</p>
+                            <p>Dispuesto a trabajar en grupo para lograr objetivos mutuos.</p>
+                            <p>Tambien, llevo algunos años programando pero ultimamente me he dedicado al mundo del desarrollo web.</p>
+                            <img src="asset/img/perfil.png">
+                        </div>
+                        <div class="col-lg-6 skill">
+                            <h3 class="text-center"><a href="#AboutMe">Habilidades</a></h2>
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col">
+                                    <div>
+                                        <h3>Lenguajes de Marcado</h3>
+                                        <ul>
+                                            <li>CSS Grid / Flex, HTML</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3>Lenguajes de programación</h3>
+                                        <ul>
+                                            <li>PHP, JavaScript, Python, C#, Java EE</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3>Base de datos</h3>
+                                        <ul>
+                                            <li>SQL / MySQL server, Mongoos</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col">
+                                    <div>
+                                        <h3>Librerias</h3>
+                                        <ul>
+                                            <li>Bootstrap, jQuery</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3>Framework</h3>
+                                        <ul>
+                                            <li>node JS, Express, Laravel, Angular</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3>Sistemas Operativos</h3>
+                                        <ul>
+                                            <li>Windows Server, CentOS, Ubuntu</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>  
-                
-                <div class="skill">
-                    <h2><a href="#AboutMe">Habilidades</a></h2>
-                    <h3>Lenguajes de Marcado</h3>
-                    <ul>
-                        <li>CSS Grid / Flex, HTML</li>
-                    </ul>
-                    <h3>Lenguajes de programación</h3>
-                    <ul>
-                        <li>PHP, JavaScript, Python, C#, Java EE</li>
-                    </ul>
-                    <h3>Base de datos</h3>
-                    <ul>
-                        <li>SQL / MySQL server, Mongoos</li>
-                    </ul>
-                    <h3>Librerias</h3>
-                    <ul>
-                        <li>Bootstrap, jQuery</li>
-                    </ul>
-                    <h3>Framework</h3>
-                    <ul>
-                        <li>node JS, Express, Laravel, Angular</li>
-                    </ul>
-                    <h3>Sistemas Operativos</h3>
-                    <ul>
-                        <li>Windows Server, CentOS, Ubuntu</li>
-                    </ul>
-                </div>      
             </div>
 
             <!--Contenido: Projects-->
-            <div class="Project">
-                <h2><a href="#Project">Proyectos destacados</a></h2>
-                <div>
-                    <ul>
-                        <li>
-                            <a target="_blank" href="url">
-                                <img src="asset/img/tiendaOnline.png" alt="tiendaOnline">
-                                <h3>Tienda online</h3>
-                                <p>Uso de CSS, HTML, PHP (POO y MVC) y SQL</p>
-                                <a class="btn" target="_blank" href="https://tiendaonliphppoomvc.rogerryes.repl.co/">Ver pagina</a>
-                            </a>
-                        </li>        
-                    </ul>
+            <div class="Project container text-center">
+                <h3><a href="#Project">Proyectos destacados</a></h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 22rem;">
+                            <img src="asset/img/tiendaOnline.png" class="card-img-top" alt="tiendaOnline">
+                            <div class="card-body">
+                              <h5 class="card-title">Tienda online</h5>
+                              <p class="card-text">Uso de CSS, HTML, PHP (POO y MVC) y SQL.</p>
+                              <a href="https://tiendaonliphppoomvc.rogerryes.repl.co/" target="_blank" class="card-link">Ver pagina</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 22rem;">
+                            <img src="asset/img/js_jquery.png" class="card-img-top" alt="tiendaOnline">
+                            <div class="card-body">
+                              <h5 class="card-title">Bloc</h5>
+                              <p class="card-text">Uso de Bootstrap, jQuery, responsive design.</p>
+                              <a href="https://proyectojsjquery.rogerryes.repl.co/index.html" target="_blank" class="card-link">Ver pagina</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 22rem;">
+                            <img src="asset/img/rastreador.png" class="card-img-top" alt="tiendaOnline">
+                            <div class="card-body">
+                              <h5 class="card-title">Geolocalizador de dispositivos</h5>
+                              <p class="card-text">Uso de CSS, HTML, JS, PHP, JSON, Mapbox y SQL.</p>
+                              <a href="https://proyectojsjquery.rogerryes.repl.co/index.html" target="_blank" class="card-link">Ver pagina</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a target="_blank" href="url">
-                                <img src="asset/img/js_jquery.png" alt="tiendaOnline">
-                                <h3>Bloc</h3>
-                                <p>Uso de Bootstrap, jQuery, responsive design</p>
-                                <a class="btn" target="_blank" href="https://proyectojsjquery.rogerryes.repl.co/index.html">Ver pagina</a>
-                            </a>
-                        </li>        
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a target="_blank" href="url">
-                                <img src="asset/img/rastreador.png" alt="tiendaOnline">
-                                <h3>Pagina Geolocalizador de dispositivos</h3>
-                                <p>Uso de CSS, HTML, JS, PHP, JSON, Mapbox y SQL</p>
-                                <a class="btn" target="_blank" href="https://proyectojsjquery.rogerryes.repl.co/index.html">Ver pagina</a>
-                            </a>
-                        </li>        
-                    </ul>
-                </div>
-            
-                <p>Más proyectos próximamente ...</p>
+                <br>
+                <p>Más proyectos próximamente...</p>
             </div>
 
             <!--Contenido: Contact-->
             <div class="Contact">
-                <h2><a href="#Contact">Contacta conmigo</a></h2>
-                <nav>
-                    <ul>
-                        <li><a target="_blank" href="url">
-                                <img src="asset/img/linkedIn.png" alt="linkedin"><br>
-                            </a>
-                        </li>                      
-                    </ul>
-                </nav>
-                <nav>
-                    <ul>
-                        <li><a target="_blank" href="url">
-                                <img src="asset/img/github.png" alt="github"><br>
-                            </a>
-                        </li>                      
-                    </ul>
-                </nav>
-                <nav>
-                    <ul>
-                        <li><a target="_blank" href="url">
-                                <img src="asset/img/gmail.png" alt="gmail"><br>
-                            </a>
-                        </li>                      
-                    </ul>
-                </nav>
-                <nav>
-                    <ul>
-                        <li><a target="_blank" href="url">
-                                <img src="asset/img/twitter.png" alt="twitter"><br>
-                            </a>
-                        </li>                      
-                    </ul>
-                </nav>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3><a href="#Contact">Contactame</a></h2>
+                            <!-- SOCIAL NETWORK -->
+                            <div class="row">
+                                <div class="col">
+                                    <nav>
+                                        <ul>
+                                            <li><a target="_blank" href="https://www.linkedin.com/in/rogerreys/">
+                                                    <img src="asset/img/linkedIn.png" alt="linkedin"><br>
+                                                    <p>\rogerreys</p>
+                                                </a>
+                                            </li>                      
+                                        </ul>
+                                    </nav>
+                                    <nav>
+                                        <ul>
+                                            <li><a target="_blank" href="https://github.com/rogerreys">
+                                                    <img src="asset/img/github.png" alt="github"><br>
+                                                    <p>\rogerreys</p>
+                                                </a>
+                                            </li>                      
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="col">
+                                    <nav>
+                                        <ul>
+                                            <li><a target="_blank" href="url">
+                                                    <img src="asset/img/gmail.png" alt="gmail"><br>
+                                                    <p>r_reys</p>
+                                                </a>
+                                            </li>                      
+                                        </ul>
+                                    </nav>
+                                    <nav>
+                                        <ul>
+                                            <li><a target="_blank" href="https://twitter.com/roger_reys">
+                                                    <img src="asset/img/twitter.png" alt="twitter"><br>
+                                                    <p>roger_reys</p>
+                                                </a>
+                                            </li>                      
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p>Hi</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </article>
         <!--Pie de pagina-->
