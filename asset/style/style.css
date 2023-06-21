@@ -7,6 +7,8 @@
     --gray: #2a2a2e;
     --black: #000000;
     --shadow: rgb(44, 44, 44);
+    --var-height: 0px;
+    --var-width: 0px;
 }
 /*GENERALES*/
 *{
@@ -102,6 +104,11 @@ section{
 
 
 /*Intro*/
+#intro {
+    width: var(--var-width);
+    height: var(--var-height);
+}
+
 .Intro{
     display: flex;
     flex-direction: column;
@@ -114,6 +121,7 @@ section{
     background-repeat: no-repeat;
 }
 .Intro h3{
+    padding-right: 20px;
     width: 100%;
 }
 .Intro h6{
@@ -132,12 +140,18 @@ section{
 }
 .Intro p{
     font-size: 38px;
+    padding-right: 20px;
     color:white;
     font-weight: bolder;
     width: 100%;
 }
 
 /*AboutMe*/
+#aboutMe  {
+    width: var(--var-width);
+    height: var(--var-height);
+}
+
 .AboutMe{
     width: 100%;
     justify-content: space-around;
@@ -156,6 +170,7 @@ section{
     align-items: center;
     padding: 20px;
     background-color: var(--red);
+    height: var(--var-height);
 }
 .infoAboutMe img{
     margin-top: 20px; 
@@ -187,6 +202,11 @@ section{
 
 
 /*Projects*/
+#project {
+    width: var(--var-width);
+    height: var(--var-height);
+}
+
 .Project{
     background: var(--white);
     min-height: 550px;
@@ -224,6 +244,11 @@ section{
 
 
 /*ContactMe*/
+#contact {
+    width: var(--var-width);
+    height: var(--var-height);
+}
+
 .Contact{
     display: flex;
     flex-direction: column;
@@ -298,6 +323,11 @@ footer{
     }
     
     /*Projects*/
+    #project {
+        width: var(--var-width);
+        height: var(--var-height);
+    }
+
     .Project ul{
         display: grid;
         grid-template-columns: 150px;
@@ -311,6 +341,11 @@ footer{
     }
     
     /*ContactMe*/
+    #contact {
+        width: var(--var-width);
+        height: var(--var-height);
+    }
+
     .Contact{
          min-height: auto;
     }
