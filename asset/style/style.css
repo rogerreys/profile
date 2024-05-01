@@ -173,7 +173,7 @@ section{
     height: var(--var-height);
 }
 .infoAboutMe img{
-    margin-top: 20px; 
+    padding: 5px;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -209,10 +209,10 @@ section{
 
 .Project{
     background: var(--white);
-    min-height: 550px;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto; 
+    /* min-height: 550px; */
+    /* align-items: center;
+    justify-content: center; */
+    /* margin: 0px auto;  */
 }
 .Project h3 a{
     color: var(--gray);
@@ -231,16 +231,16 @@ section{
     list-style: none; 
     margin: 0px auto;
 }
-.Project img{
-    width: 340px;
-    height: 200px;
+.carousel-item img{
+    width: 440px;
+    height: 400px;
 }
-.Project h3{
+/* .Project h3{
     color: black;
 }
 .Project p{
     color: gray;
-}
+} */
 
 
 /*ContactMe*/
