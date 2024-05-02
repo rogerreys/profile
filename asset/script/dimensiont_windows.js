@@ -4,6 +4,6 @@ var widthScreen = window.innerWidth || document.documentElement.clientWidth || d
 var heightScreen = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 
-console.log(widthScreen+"px "+heightScreen+"px");
-document.documentElement.style.setProperty("--var-width", widthScreen-17+"px");
-document.documentElement.style.setProperty("--var-height", heightScreen+"px");
+console.log(widthScreen + "px " + heightScreen + "px");
+document.documentElement.style.setProperty("--var-width", widthScreen - 17 + "px");
+document.documentElement.style.setProperty("--var-height", heightScreen + "px");

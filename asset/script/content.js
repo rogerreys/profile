@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // console.log("dict: "+ dict["intro"]["title"])
     intro();
     infoAboutMe();
@@ -7,67 +7,67 @@ document.addEventListener("DOMContentLoaded", function() {
     contact();
 });
 
-function intro(){
+function intro() {
     let intro = '';
-    intro += "<h3 class='text-end'><a href='#intro'>"+ dict.intro.title +"</a></h2>";
-    intro += "<p class='text-end'>"+ dict.intro.description +"</p>";
+    intro += "<h3 class='text-end'><a href='#intro'>" + dict.intro.title + "</a></h2>";
+    intro += "<p class='text-end'>" + dict.intro.description + "</p>";
     // Agregar el HTML al div con id "content"
     document.getElementById('intro').innerHTML = intro;
 }
 
-function infoAboutMe(){
+function infoAboutMe() {
     let text_inf = `<div class='container text-center'> 
         <h3 class='text-center'><a href='#AboutMe'>${dict.aboutMe.title}</a></h2>
         <div>${dict.aboutMe.description}</div>
         <img class='img-fluid' src="${dict.aboutMe.img}"/>
     </div>`;
-        
+
     let infoAboutMe = document.getElementsByClassName('infoAboutMe')[0];
     infoAboutMe.innerHTML = text_inf
 }
 
-function skill(){
+function skill() {
     let content = '';
-
+    let long = Object.keys(dict.skill).length - 1
     let text = `<div class='container'>`;
     text = `<h3 class="text-center"><a href="#AboutMe">${dict["skill"]["title"]}</a></h2>`;
     text += `<div class="container text-center">`
-    
-    for(var key in dict.skill){
+
+    for (var key in dict.skill) {
         if (dict.skill.hasOwnProperty(key)) {
-            
-            var aRow = (parseInt(key)%2 == 0);
+
+            var aRow = (parseInt(key) % 2 == 0 || parseInt(key) == long);
             var item = dict.skill[key];
-            
+
             content += `<div class="col-6">
                 <h3>${item.title}</h3>
                 <ul><li>${item.description}</li></ul>
-            </div>`;              
-            
+            </div>`;
 
-            text += aRow ? '<div class="row">' + content + `</div>`:'';
-            content = aRow ? '': content;
+
+            text += aRow ? '<div class="row">' + content + `</div>` : '';
+            content = aRow ? '' : content;
         }
     }
     text += '</div></div>';
-    
+
     let skill = document.getElementsByClassName('skill')[0];
     skill.innerHTML = text
 }
 
-function project(){
+function project() {
     let text = '';
     let active = true;
     text += `<h2><a href="#Project">${dict.project.title}</a></h2>`;
 
     text += `<div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-inner">`;
-    for(var key in dict.project){
-        
-        if (dict.project.hasOwnProperty(key) && (parseInt(key)%1)==0) {
+    for (var key in dict.project) {
+
+        if (dict.project.hasOwnProperty(key) && (parseInt(key) % 1) == 0) {
             var item = dict.project[key];
-            
-            text += `<div class="carousel-item ${ (active) ? 'active' : '' }">
+
+            text += `<div class="carousel-item ${(active) ? 'active' : ''}" data-bs-interval="3000">
                 <img src="${item.img}" class="d-block mx-auto w-100" alt="${item.alt}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 class="${item.color ? item.color : 'text-dark'} d-block">${item.title}</h5>
@@ -94,17 +94,17 @@ function project(){
     project.innerHTML = text
 }
 
-function contact(){
+function contact() {
     let text = `<div class='container text-center'>`;
     text += `<h2><a href="#Contact">${dict.contact.title}</a></h2>`;
     text += `<div class="container text-center">`
     text += `<div class="row">`;
-    
-    for(var key in dict.contact){
-        if (dict.contact.hasOwnProperty(key) && (parseInt(key)%1)==0) {
-            
+
+    for (var key in dict.contact) {
+        if (dict.contact.hasOwnProperty(key) && (parseInt(key) % 1) == 0) {
+
             var item = dict.contact[key];
-            
+
             text += `<div class="col">
             <nav>
                 <ul>
@@ -115,10 +115,10 @@ function contact(){
                     </li>                      
                 </ul>
             </nav>
-        </div>`;              
+        </div>`;
         }
     }
-    text += '</div></div></div>';   
+    text += '</div></div></div>';
 
     let contact = document.getElementById('contact');
     contact.innerHTML = text
