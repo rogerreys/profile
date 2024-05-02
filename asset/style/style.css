@@ -231,10 +231,9 @@ section{
     list-style: none; 
     margin: 0px auto;
 }
-.carousel-item img{
-    width: 440px;
-    height: 400px;
-}
+/* .carousel-item img{
+    height: 500px;
+} */
 /* .Project h3{
     color: black;
 }
@@ -355,6 +354,10 @@ footer{
         grid-template-rows: 200px 200px;
         justify-content: center;
     }
+}
+
+.carousel-caption.transparent {
+    background-color: rgba(60, 60, 60, 0.4);
 }
 
 /* Scroll */

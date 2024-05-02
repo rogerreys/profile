@@ -51,7 +51,7 @@ var dict = {
             "title": "Bloc Personal",
             "description": "Desarrollo de página web mediante WordPress y base de datos MySQL.   ",
             "link": "https://bytehube.com/",
-            "img": "asset/img/tiendaOnline.png",
+            "img": "asset/img/bytehube.png",
             "alt": "bytehube"
         },
         "2": {
@@ -72,7 +72,7 @@ var dict = {
             "title": "Clasificador de imagenes",
             "description": "Uso de red neuronal ResNet50m, Reddis, Flask, etc.",
             "link": "https://github.com/rogerreys/AnyOne/tree/sprint3",
-            "img": "asset/img/tiendaOnline.png",
+            // "img": "asset/img/tiendaOnline.png",
             "alt": "resnet50"
         }
 

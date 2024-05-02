@@ -68,11 +68,12 @@ function project() {
             var item = dict.project[key];
 
             text += `<div class="carousel-item ${(active) ? 'active' : ''}" data-bs-interval="3000">
-                <img src="${item.img}" class="d-block mx-auto w-100" alt="${item.alt}">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="${item.color ? item.color : 'text-dark'} d-block">${item.title}</h5>
-                    <p class="${item.color ? item.color : 'text-dark'}">${item.description}</p>
-                    <a href="${item.link}" class="btn btn-dark stretched-link" target="_blank">Ver pagina</a>
+                <img src="${item.img}" class="d-block mx-auto" alt="${item.alt}">
+                <div class="carousel-caption d-none d-md-block border rounded-3 transparent">
+                
+                    <h5 class="${item.color ? item.color : 'text-white'} d-block">${item.title}</h5>
+                    <p class="${item.color ? item.color : 'text-white'}">${item.description}</p>
+                    <a href="${item.link}" class="btn btn-danger stretched-link active" target="_blank">Ver pagina</a>
                 </div>
             </div>`;
             active = false;
@@ -92,6 +93,21 @@ function project() {
 
     let project = document.getElementById('project');
     project.innerHTML = text
+
+    projectCarouselImg();
+}
+
+function projectCarouselImg(){
+    let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    let heightImg = `${height - (height/6)}px`;
+    let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let widthImg = `${width - (width/5)}px`;
+    var imagenes = document.querySelectorAll('.carousel-item img');
+    
+    imagenes.forEach(function(imagen) {
+        imagen.style.height = heightImg;
+        imagen.style.width = widthImg;
+    });
 }
 
 function contact() {
