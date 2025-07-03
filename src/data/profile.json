@@ -1,0 +1,123 @@
+{
+  "aboutMe": {
+    "title": "Acerca de mi",
+    "description": "<p>¡Hola! Soy <strong>Roger Steven Reyes Medina</strong>, un apasionado desarrollador fullstack de Quito, Ecuador. Me encanta aprender y explorar nuevas tecnologías para crear productos digitales que generen impacto.</p><p>Mi enfoque está en el desarrollo de aplicaciones SaaS, automatización de procesos y soluciones web personalizadas. Creo en el poder de la colaboración, el código limpio y las ideas que resuelven problemas reales.</p><p>Estoy construyendo mi camino como emprendedor tecnológico mientras desarrollo productos propios, participo en proyectos creativos y comparto conocimiento.</p>",
+    "details": {
+      "description": "Estudios en Informática con enfoque en desarrollo web y automatización.",
+      "quickInfo": [
+        { "label": "Ubicación", "value": "Quito, Ecuador" },
+        { "label": "Edad", "value": "1997" },
+        { "label": "Lenguaje", "value": "Español (Nativo), Ingles(B1), Frances(A1)" }
+      ],
+      "experience": [
+        {
+          "role": "Desarrollador Junior",
+          "company": "Clear Minds Consultores CIA. LTDA",
+          "period": "2021 - 2022",
+          "description": "Desarrollo de pruebas unitarias y automatizadas en java para core financiero."
+        },
+        {
+          "role": "Desarrollador Fullstack",
+          "company": "Cobistopaz",
+          "period": "2022 - Actualidad",
+          "description": "Desarrollo de programas en java y javascript desplegados en aws. Y administracion de base de datos mysql."
+        },
+        {
+          "role": "Tester de modelos",
+          "company": "Anyone AI",
+          "period": "2023 - 2024",
+          "description": "Pruebas de modelos de IA con python y java."
+        }
+      ],
+      "education": [
+        {
+          "degree": "Ingeniería en Telecomunicaciones y electrónica",
+          "institution": "Escuela Politécnica Nacional",
+          "period": "2017 - 2021",
+          "description": "Estudios en telecomunicaciones y electrónica."
+        }
+      ],
+      "social": {
+        "github": "https://github.com/rogerreys",
+        "linkedin": "https://www.linkedin.com/in/rogerreys/",
+        "twitter": "https://twitter.com/roger_reys",
+        "gmail": "https://mail.google.com/mail/?view=cm&fs=1&to=roger.ry97m@gmail.com"
+      }
+    },
+    "img": "assets/img/perfil.jpg"
+  },
+  "skillscompuestos": {
+    "frameworks_librerias": {
+      "javascript": ["React", "Express", "Next.js (aprendiendo)"],
+      "python": ["Pytest"],
+      "java": ["JUnit Jupiter"]
+    },
+    "bases_datos": {
+      "relacionales": ["MySQL", "PostgreSQL", "SQL Server"],
+      "clave_valor": ["Redis"],
+      "otros": ["Supabase"]
+    },
+    "desarrollo_web": {
+      "frontend": ["HTML", "CSS", "JavaScript", "React"],
+      "backend": ["Node.js", "Express", "Java (Spring básico)", "Python"],
+      "apis": ["REST", "GraphQL", "WebSockets"]
+    }
+  },
+  "skills": {
+    "lenguajes_programacion": ["JavaScript", "Python", "Java", "Node.js"],
+    "versionamiento": ["Git"],
+    "contenedores": ["Docker", "Docker Compose"],
+    "infraestructura_nube": ["AWS", "Google Cloud Platform (GCP)"],
+    "inteligencia_artificial": [
+      "RAG",
+      "Embeddings",
+      "Entrenamiento básico de modelos",
+      "Integración de IA en aplicaciones"
+    ],
+    "otros": [
+      "Automatización con n8n",
+      "Uso de terminal Unix/Linux",
+      "Análisis y depuración de código",
+      "Diseño y despliegue de APIs"
+    ]
+  },
+  "project": {
+    "title": "Proyectos destacados",
+    "list_projects": [
+      {
+        "title": "Chatbot RAG",
+        "description": "Chatbot con estructura RAG",
+        "link": "https://github.com/Julian-Decurnex/financial-advisor-chatbot/tree/development"
+      },
+      {
+        "title": "Bloc tecnologias",
+        "description": "Bloc sobre tecnologias",
+        "link": "https://github.com/rogerreys/contenedor_bytehube"
+      },
+      {
+        "title": "Snake",
+        "description": "Snake | Python",
+        "link": "https://github.com/rogerreys/SnakePython"
+      }      
+    ]
+  },
+  "contact": {
+    "title": "Contactame",
+    "linkedin": {
+      "link": "https://www.linkedin.com/in/rogerreys/",
+      "nickname": "/rogerreys"
+    },
+    "github": {
+      "link": "https://github.com/rogerreys",
+      "nickname": "/rogerreys"
+    },
+    "gmail": {
+      "link": "https://mail.google.com/mail/?view=cm&fs=1&to=roger.ry97m@gmail.com",
+      "nickname": "roger.ry97m@gmail.com"
+    },
+    "twitter": {
+      "link": "https://twitter.com/roger_reys",
+      "nickname": "roger_reys"
+    }
+  }
+}
