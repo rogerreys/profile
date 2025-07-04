@@ -1,11 +1,13 @@
 {
   "name": "profile_react",
   "private": true,
+  "homepage": "https://rogerreys.github.io/profile",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "echo '\nUser-agent: *\nDisallow:' > dist/robots.txt && echo '' > dist/.nojekyll",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

@@ -4,5 +4,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/profile',
   plugins: [react(), tailwindcss()],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: true
+  },
+  server: {
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/profile/, to: '/profile/index.html' },
+      ]
+    }
+  }
 })

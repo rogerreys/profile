@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowRight, FaCode, FaRocket, FaLightbulb } from 'react-icons/fa';
 
@@ -203,19 +203,19 @@ const Home = () => {
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-black to-zinc-900 text-white">
-      <Router>
-        <Header />
-        <main className="relative z-0">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </Router>
+      <Header />
+      <main className="relative z-0">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Redirección para rutas no encontradas */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
