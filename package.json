@@ -2,7 +2,7 @@
   "name": "profile_react",
   "private": true,
   "homepage": "https://rogerreys.github.io/profile",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
