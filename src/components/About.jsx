@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import profile from '../data/profile.json';
-import perfil from '../assets/img/perfil.jpg';
+import perfil from '../assets/img/perfil.svg';
 import { FaUser, FaCode, FaGraduationCap, FaBriefcase, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLeetcode, SiFrontendmentor } from 'react-icons/si';
@@ -12,7 +12,7 @@ function About() {
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'experience':
+      case 'Experiencia':
         return (
           <div className="space-y-4">
             {details.experience.map((exp, idx) => (
@@ -31,7 +31,7 @@ function About() {
             ))}
           </div>
         );
-      case 'education':
+      case 'Educacion':
         return (
           <div className="space-y-4">
             {details.education.map((edu, idx) => (
@@ -80,7 +80,7 @@ function About() {
   return (
     <section className="max-w-10xl mx-auto my-16 px-4">
       <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-4">
-      Sobre <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-amber-300">Mí</span>
+        Sobre <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-amber-300">Mí</span>
       </h2>
 
       <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl shadow-xl overflow-hidden">
@@ -123,7 +123,7 @@ function About() {
           <div className="flex-1 p-6 md:p-8">
             {/* Tabs */}
             <div className="flex space-x-1 bg-zinc-800/50 p-1 rounded-lg mb-8">
-              {['about', 'experience', 'education'].map((tab) => (
+              {['Acerca', 'Experiencia', 'Educacion'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -132,9 +132,9 @@ function About() {
                     : 'text-zinc-300 hover:bg-zinc-700/50'
                     }`}
                 >
-                  {tab === 'about' && <FaUser />}
-                  {tab === 'experience' && <FaBriefcase />}
-                  {tab === 'education' && <FaGraduationCap />}
+                  {tab === 'Acerca' && <FaUser />}
+                  {tab === 'Experiencia' && <FaBriefcase />}
+                  {tab === 'Educacion' && <FaGraduationCap />}
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
               ))}

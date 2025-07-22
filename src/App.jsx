@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowRight, FaCode, FaRocket, FaLightbulb } from 'react-icons/fa';
 
@@ -14,23 +14,15 @@ const Home = () => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -45,7 +37,7 @@ const Home = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated background gradient */}
-      <div 
+      <div
         className="absolute inset-0 -z-10 transition-opacity duration-1000"
         style={{
           background: `radial-gradient(circle at ${gradientX}% ${gradientY}%, rgba(190, 24, 93, 0.15) 0%, rgba(0, 0, 0, 0) 50%)`,
@@ -53,7 +45,7 @@ const Home = () => {
       />
 
       {/* Floating elements */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/4 left-1/4 w-16 h-16 bg-pink-600/20 rounded-full blur-xl -z-10"
         animate={{
           x: [0, 15, 0],
@@ -66,7 +58,7 @@ const Home = () => {
           ease: 'easeInOut',
         }}
       />
-      <motion.div 
+      <motion.div
         className="absolute top-1/3 right-1/4 w-24 h-24 bg-amber-400/15 rounded-full blur-xl -z-10"
         animate={{
           x: [0, -20, 0],
@@ -83,7 +75,7 @@ const Home = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -100,14 +92,14 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
           >
-            <button 
-              onClick={() => navigate('/projects')} 
+            <button
+              onClick={() => navigate('/projects')}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               className="group relative overflow-hidden px-8 py-4 bg-gradient-to-r from-pink-700 to-pink-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-pink-500/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2"
@@ -121,9 +113,9 @@ const Home = () => {
               </motion.span>
               <span className="absolute inset-0 bg-gradient-to-r from-amber-400 to-pink-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
             </button>
-            
-            <button 
-              onClick={() => navigate('/contact')} 
+
+            <button
+              onClick={() => navigate('/contact')}
               className="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-pink-600 hover:bg-pink-900/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 group"
             >
               <span>Contáctame</span>
@@ -132,7 +124,7 @@ const Home = () => {
           </motion.div>
 
           {/* Features */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -155,7 +147,7 @@ const Home = () => {
                 description: 'Enfoque creativo para resolver problemas complejos con soluciones simples y efectivas.'
               }
             ].map((feature, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
                 className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-2xl border border-zinc-800 hover:border-pink-900/50 transition-all duration-300"
@@ -170,7 +162,7 @@ const Home = () => {
           </motion.div>
 
           {/* Social Links */}
-          <motion.div 
+          <motion.div
             className="flex justify-center gap-6 mt-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -211,7 +203,6 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Redirección para rutas no encontradas */}
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

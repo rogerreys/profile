@@ -39,19 +39,18 @@ function Skills() {
       <h2 className="text-center text-4xl md:text-5xl font-bold text-white mb-4">
         Mis <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-amber-300">Conocimientos</span>
       </h2>
-      
+
       {/* Skills Compuestos Section */}
       <div className="mb-16 space-y-6">
         <h2 className="text-3xl font-bold text-center text-pink-800 mb-8">Habilidades Avanzadas</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {Object.entries(skillscompuestos).map(([categoria, subcategorias], idx) => (
-            <div 
+            <div
               key={categoria}
-              className={`bg-gradient-to-br from-pink-900/50 to-pink-800/30 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 ${
-                expandedCategory === categoria ? 'row-span-2' : 'h-auto'
-              }`}
+              className={`bg-gradient-to-br from-pink-900/50 to-pink-800/30 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 ${expandedCategory === categoria ? 'row-span-2' : 'h-auto'
+                }`}
             >
-              <div 
+              <div
                 className="p-5 cursor-pointer flex justify-between items-center bg-pink-800/70 hover:bg-pink-800/90 transition-colors"
                 onClick={() => toggleCategory(categoria)}
               >
@@ -69,7 +68,7 @@ function Skills() {
                   <FaChevronDown className="text-pink-200" />
                 )}
               </div>
-              
+
               <div className={`p-5 space-y-4 transition-all duration-300 ${expandedCategory === categoria ? 'block' : 'hidden'}`}>
                 {Object.entries(subcategorias).map(([subcategoria, items]) => (
                   <div key={subcategoria} className="mb-4">
@@ -81,7 +80,7 @@ function Skills() {
                     </div>
                     <div className="flex flex-wrap gap-2 ml-4">
                       {items.map((item, index) => (
-                        <span 
+                        <span
                           key={index}
                           className="px-3 py-1.5 text-sm rounded-full bg-pink-700/50 text-gray-100 hover:bg-pink-600/70 transition-colors"
                           style={{ border: `1px solid ${getPastelColor(item)}40` }}

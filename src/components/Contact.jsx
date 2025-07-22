@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { FiMail } from 'react-icons/fi';
 import { FaXTwitter } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
-import { SiGmail, SiGithub, SiLinkedin} from 'react-icons/si';
+import { SiGmail, SiGithub, SiLinkedin } from 'react-icons/si';
 import profile from "../data/profile.json";
 
-const ContactCard = ({ icon: Icon, platform, link, username, color, delay }) => {
+const ContactCard = ({ platform, link, username, delay }) => {
   const platformIcons = {
     gmail: <SiGmail className="text-3xl" />,
     github: <SiGithub className="text-3xl" />,
@@ -65,7 +65,7 @@ function Contact() {
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto">
-      <motion.div 
+      <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ function Contact() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {contacts.map((contact, index) => (
-          <ContactCard 
+          <ContactCard
             key={index}
             platform={contact.platform}
             link={contact.link}
@@ -91,14 +91,14 @@ function Contact() {
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         className="mt-16 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <p className="text-zinc-400 mb-4">O envíame un correo directamente a</p>
-        <a 
+        <a
           href={gmail.link} target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-amber-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 group"
         >
