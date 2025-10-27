@@ -85,6 +85,11 @@
     "title": "Proyectos destacados",
     "list_projects": [
       {
+        "title": "SIGO | Sistemas de Gestión de Operaciones",
+        "description": "Sistema de gestión de operaciones",
+        "link": "https://www.sigowebs.com/#/dashboard"
+      },
+      {
         "title": "Chatbot RAG",
         "description": "Chatbot con estructura RAG",
         "link": "https://github.com/Julian-Decurnex/financial-advisor-chatbot/tree/development"
